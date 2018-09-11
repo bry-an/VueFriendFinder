@@ -1,0 +1,23 @@
+$vista-blue: #42b983;
+$body-text-color: #444;
+
+
+.navbar {
+    background-color: $vista-blue;
+    height: 50px;
+}
+
+#navbar-text {
+    float: right;
+    color: white;
+    font-size: 3rem;
+    margin-right: 20%;
+    background-color: #42b983
+}
+
+#home-intro {
+    text-align: justify;
+    color: $body-text-color;
+    font-size: 2.3rem;
+    margin-top: 8%;
+}
