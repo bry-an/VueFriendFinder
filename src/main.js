@@ -3,14 +3,31 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Navbar from './components/Navbar'
+import Vuex from 'vuex';
+import SurveyQuestion from './components/SurveyQuestion.vue'
+
+Vue.use(Vuex);
+
+const store = new Vuex.Store({
+
+  state: {
+    userAnswers: [5]
+  }, 
+  mutations: {
+    addAnswer (state, payload, index) {
+      state.userAnswers[index] = payload;
+    }
+  }
+})
+
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
-  components: { App, Navbar },
+  components: { App, SurveyQuestion},
   template: '<App/>'
 })

@@ -1,6 +1,9 @@
 $vista-blue: #42b983;
 $body-text-color: #444;
 
+.container {
+    margin-top: 20px;
+}
 
 .navbar {
     background-color: $vista-blue;
@@ -19,5 +22,12 @@ $body-text-color: #444;
     text-align: justify;
     color: $body-text-color;
     font-size: 2.3rem;
-    margin-top: 8%;
+}
+
+.questions-header {
+    text-align: center;
+}
+
+#questions ul {
+    list-style: none;
 }
