@@ -1,27 +1,34 @@
 <template>
 <div class='survey-question'>
-    <div class='question-input'>
-        <input type='radio' id='one' value='One' v-model='picked'>
-        <label for='one'>1</label>
-    </div>
+    <div id='question-display'>
     {{ question }}
+    </div>
+    <div class='question-input'>
+        <input type='radio' @change='addAnswer' v-model='answer' value='1'>1
+        <input type='radio' @change='addAnswer' v-model='answer' value='2'>2
+        <input type='radio' @change='addAnswer' v-model='answer' value='3'>3
+        <input type='radio' @change='addAnswer' v-model='answer' value='4'>4
+        <input type='radio' @change='addAnswer' v-model='answer' value='5'>5
+    </div>
 </div>
 </template>
 
 
 <script>
 export default {
-    
     computed: {
-        returnState() {
-            return console.log(this.$store.state)
+        answers () {
+            return this.$store.getters.getAnswers;
         }, 
     },
     methods: {
-        // addAnswer() {
-        //     this.$store.commit('addAnswer', picked, 0)
-        // }
+        addAnswer() {
+            this.$store.commit('addAnswer', {
+                index: this.index, 
+                answer: this.answer
+             });
+        }
     },
-    props: [ 'question', 'picked' ]
+    props: [ 'question', 'answer', 'index' ]
 }
 </script>

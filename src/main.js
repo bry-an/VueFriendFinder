@@ -11,11 +11,16 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
 
   state: {
-    userAnswers: [5]
+    userAnswers: []
   }, 
   mutations: {
-    addAnswer (state, payload, index) {
-      state.userAnswers[index] = payload;
+    addAnswer (state, payload) {
+      state.userAnswers[payload.index] = payload.answer;
+    }
+  }, 
+  getters: {
+    returnAnswers: state => {
+      console.log(state.userAnswers);
     }
   }
 })
