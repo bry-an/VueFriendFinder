@@ -1,6 +1,7 @@
 let express = require('express');
 let bodyParser = require('body-parser');
 let path = require('path');
+var serveStatic = require('serve-static');
 
 let app = express();
 app.use(serveStatic(__dirname + '/dist'));
