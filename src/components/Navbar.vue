@@ -1,6 +1,6 @@
 <template>
     <div class='u-full-width navbar'>
-        <div id='navbar-text'>Companion Finder</div>
+        <router-link to='/'><div id='navbar-text'>Companion Finder</div></router-link>
     </div>
 </template>
 
