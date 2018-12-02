@@ -24,4 +24,5 @@ describe("SurveyQuestion", () => {
         })
         expect(wrapper.vm.question).toBe('question1')
     })
+
 })

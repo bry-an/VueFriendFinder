@@ -3,6 +3,8 @@ import SurveyList from "../../components/SurveyList"
 import SurveyQuestion from "../../components/SurveyQuestion"
 import Vuex from "Vuex"
 import initialState from "../../store/state"
+import store from "../../store"
+
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -26,7 +28,9 @@ describe("SurveyList", () => {
         }
     }
     beforeEach(() => {
-        state = { ...initialState}
+        state = {}
+        state = {...store.state}
+        state.userAnswers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     })
 
     it("is a Vue instance", () => {
@@ -40,8 +44,11 @@ describe("SurveyList", () => {
         expect(SurveyQuestion().exists()).toBe(true)
     })
 
-    it("Renders complete button", () => {
+    it("Renders complete button if showButton is true", () => {
+        const { wrapper } = build()
         const { button } = build()
+        console.info('state', state.userAnswers)
+
 
         expect(button().exists()).toBe(true)
     })
