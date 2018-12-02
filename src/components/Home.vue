@@ -7,7 +7,7 @@
     only the simplest understanding about what it takes for a healthy relationship.</p>
 <p>Fill out this quick form to discover your ideal companion -- and maybe even learn
     something about yourself. </p>
-    <router-link to='/SurveyList' tag="button">Get started</router-link>
+    <router-link to='/surveylist' tag="button">Get started</router-link>
 </div>
 </template>
 

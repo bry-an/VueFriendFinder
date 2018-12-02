@@ -21,7 +21,7 @@ exports[`Home renders correctly 1`] = `
    
   <router-link-stub
     tag="button"
-    to="/SurveyList"
+    to="/surveylist"
   >
     Get started
   </router-link-stub>

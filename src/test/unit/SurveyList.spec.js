@@ -32,13 +32,10 @@ describe("SurveyList", () => {
         const { wrapper } = build()
         expect(wrapper.isVueInstance()).toBe(true)
     })
-    it("has access to the store", () => {
-        
+
+    it("Renders Survey Question child", () => {
+        const { SurveyQuestion } = build()
+
+        expect(SurveyQuestion().exists()).toBe(true)
     })
-
-    // it("Renders Survey Question child", () => {
-    //     const { SurveyQuestion } = build()
-
-    //     expect(SurveyQuestion().exists()).toBe(true)
-    // })
 })
