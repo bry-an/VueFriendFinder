@@ -45,7 +45,7 @@ export default {
       return this.$store.state.userAnswers
     }, 
     showButton () {
-      return this.userAnswers.length === 10
+      return this.userAnswers.length === 10 && !this.userAnswers.includes(undefined)
     },
     result() {
       return this.$store.state.showResult
