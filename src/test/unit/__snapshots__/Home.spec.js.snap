@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<div
+  id="home-intro"
+>
+  <p>
+    Welcome to Companion Finder!
+  </p>
+   
+  <p>
+    This is a site made by an adult for adults.
+    We have no preconceived notions about what makes for a good companion,
+    only the simplest understanding about what it takes for a healthy relationship.
+  </p>
+   
+  <p>
+    Fill out this quick form to discover your ideal companion -- and maybe even learn
+    something about yourself. 
+  </p>
+   
+  <router-link-stub
+    tag="button"
+    to="/SurveyList"
+  >
+    Get started
+  </router-link-stub>
+</div>
+`;
