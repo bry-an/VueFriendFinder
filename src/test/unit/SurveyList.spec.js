@@ -42,7 +42,6 @@ describe("SurveyList", () => {
 
     it("Renders complete button", () => {
         const { button } = build()
-        console.info(button)
 
         expect(button().exists()).toBe(true)
     })
