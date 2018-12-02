@@ -6,8 +6,9 @@
     </p>
         <p class='questions-header'>Select 1 if you <strong>VEHEMENTLY DISAGREE</strong> &rarr; Select 5 if you <strong>WHOLE-HEARTEDLY AGREE</strong></p>
     <SurveyQuestion v-for='question in questions' :question='question.text' :index='question.id' :key='question.id'>kitten</SurveyQuestion>
-    <button v-show='showButton' @click='setShowResult(true); getNewFriend()'>Show me my partner!</button>
+    <button id="result" v-show='showButton' @click='setShowResult(true); getNewFriend()'>Show me my partner!</button>
     <ChosenFriend v-if='result' :newFriend='newFriend'></ChosenFriend>
+
 
 </div>
 

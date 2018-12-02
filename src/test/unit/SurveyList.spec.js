@@ -21,7 +21,8 @@ describe("SurveyList", () => {
         })
         return {
             wrapper,
-            SurveyQuestion: () => wrapper.find(SurveyQuestion)
+            SurveyQuestion: () => wrapper.find(SurveyQuestion),
+            button: () => wrapper.find("#result")
         }
     }
     beforeEach(() => {
@@ -37,5 +38,12 @@ describe("SurveyList", () => {
         const { SurveyQuestion } = build()
 
         expect(SurveyQuestion().exists()).toBe(true)
+    })
+
+    it("Renders complete button", () => {
+        const { button } = build()
+        console.info(button)
+
+        expect(button().exists()).toBe(true)
     })
 })
